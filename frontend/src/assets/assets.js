@@ -1,10 +1,10 @@
-import appointment_img from './appointment_img.png'
-import header_img from './header_img.png'
+import appointment_img from './logo2.jpg'
+import header_img from './logo3.png'
 import group_profiles from './group_profiles.png'
 import profile_pic from './profile_pic.png'
-import contact_image from './contact_image.png'
-import about_image from './about_image.png'
-import logo from './logo.svg'
+import contact_image from './contact.jpg'
+import about_image from './about.jpg'
+import logo from './logoexponent.png'
 import dropdown_icon from './dropdown_icon.svg'
 import menu_icon from './menu_icon.svg'
 import cross_icon from './cross_icon.png'
@@ -19,6 +19,7 @@ import doc1 from './doc1.png'
 import doc2 from './doc2.png'
 import doc3 from './doc3.png'
 import doc4 from './doc4.png'
+import domain from './domain.jpg'
 import doc5 from './doc5.png'
 import doc6 from './doc6.png'
 import doc7 from './doc7.png'
@@ -60,28 +61,28 @@ export const assets = {
 
 export const specialityData = [
     {
-        speciality: 'General physician',
-        image: General_physician
+        speciality: 'Data Structure',
+        image: domain
     },
     {
-        speciality: 'Gynecologist',
-        image: Gynecologist
+        speciality: 'Product Management',
+        image: domain
     },
     {
-        speciality: 'Dermatologist',
-        image: Dermatologist
+        speciality: 'Behavioral',
+        image: domain
     },
     {
-        speciality: 'Pediatricians',
-        image: Pediatricians
+        speciality: 'System Design',
+        image: domain
     },
     {
-        speciality: 'Neurologist',
-        image: Neurologist
+        speciality: 'Frontend',
+        image: domain
     },
     {
-        speciality: 'Gastroenterologist',
-        image: Gastroenterologist
+        speciality: 'Data Science',
+        image: domain
     },
 ]
 

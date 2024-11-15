@@ -14,7 +14,7 @@ const AddDoctor = () => {
     const [experience, setExperience] = useState('1 Year')
     const [fees, setFees] = useState('')
     const [about, setAbout] = useState('')
-    const [speciality, setSpeciality] = useState('General physician')
+    const [speciality, setSpeciality] = useState('Data Structure and Algorithm')
     const [degree, setDegree] = useState('')
     const [address1, setAddress1] = useState('')
     const [address2, setAddress2] = useState('')
@@ -49,7 +49,7 @@ const AddDoctor = () => {
                 console.log(`${key}: ${value}`);
             });
 
-            const { data } = await axios.post(backendUrl + '/api/admin/add-doctor', formData, { headers: { aToken } })
+            const { data } = await axios.post(backendUrl + '/api/admin/add-mentor', formData, { headers: { aToken } })
             if (data.success) {
                 toast.success(data.message)
                 setDocImg(false)
@@ -75,7 +75,7 @@ const AddDoctor = () => {
     return (
         <form onSubmit={onSubmitHandler} className='m-5 w-full'>
 
-            <p className='mb-3 text-lg font-medium'>Add Doctor</p>
+            <p className='mb-3 text-lg font-medium'>Add Mentor</p>
 
             <div className='bg-white px-8 py-8 border rounded w-full max-w-4xl max-h-[150vh] overflow-y-scroll'>
                 <div className='flex items-center gap-4 mb-8 text-gray-500'>
@@ -83,7 +83,7 @@ const AddDoctor = () => {
                         <img className='w-16 bg-gray-100 rounded-full cursor-pointer' src={docImg ? URL.createObjectURL(docImg) : assets.upload_area} alt="" />
                     </label>
                     <input onChange={(e) => setDocImg(e.target.files[0])} type="file" name="" id="doc-img" hidden />
-                    <p>Upload doctor <br /> picture</p>
+                    <p>Upload mentor <br /> picture</p>
                 </div>
 
                 <div className='flex flex-col lg:flex-row items-start gap-10 text-gray-600'>
@@ -96,7 +96,7 @@ const AddDoctor = () => {
                         </div>
 
                         <div className='flex-1 flex flex-col gap-1'>
-                            <p>Doctor Email</p>
+                            <p>Mentor Email</p>
                             <input onChange={e => setEmail(e.target.value)} value={email} className='border rounded px-3 py-2' type="email" placeholder='Email' required />
                         </div>
 
@@ -109,22 +109,19 @@ const AddDoctor = () => {
                         <div className='flex-1 flex flex-col gap-1'>
                             <p>Experience</p>
                             <select onChange={e => setExperience(e.target.value)} value={experience} className='border rounded px-2 py-2' >
-                                <option value="1 Year">1 Year</option>
-                                <option value="2 Year">2 Years</option>
-                                <option value="3 Year">3 Years</option>
-                                <option value="4 Year">4 Years</option>
-                                <option value="5 Year">5 Years</option>
-                                <option value="6 Year">6 Years</option>
-                                <option value="8 Year">8 Years</option>
-                                <option value="9 Year">9 Years</option>
-                                <option value="10 Year">10 Years</option>
+                                <option value="1-2 Year">1-2 Year</option>
+                                <option value="3-5 Year">3-5 Years</option>
+                                <option value="5-8 Year">5-8 Years</option>
+                                <option value="9-12 Year">9-12 Years</option>
+                                <option value="more than 12 Year">more then 12 Years</option>
                             </select>
                         </div>
 
                         <div className='flex-1 flex flex-col gap-1'>
                             <p>Fees</p>
-                            <input onChange={e => setFees(e.target.value)} value={fees} className='border rounded px-3 py-2' type="number" placeholder='Doctor fees' required />
+                            <input onChange={e => setFees(e.target.value)} value={fees} className='border rounded px-3 py-2' type="number" placeholder='Mentor fees' required />
                         </div>
+                        
 
                     </div>
 
@@ -133,19 +130,19 @@ const AddDoctor = () => {
                         <div className='flex-1 flex flex-col gap-1'>
                             <p>Speciality</p>
                             <select onChange={e => setSpeciality(e.target.value)} value={speciality} className='border rounded px-2 py-2'>
-                                <option value="General physician">General physician</option>
-                                <option value="Gynecologist">Gynecologist</option>
-                                <option value="Dermatologist">Dermatologist</option>
-                                <option value="Pediatricians">Pediatricians</option>
-                                <option value="Neurologist">Neurologist</option>
-                                <option value="Gastroenterologist">Gastroenterologist</option>
+                                <option value="Data Structure and Algorithm">Data Structure and Algorithm</option>
+                                <option value="Product Management">Product Management</option>
+                                <option value="Behavioural">Behavioural</option>
+                                <option value="System Design">System Design</option>
+                                <option value="Frontend">Frontend</option>
+                                <option value="Data Science">Data Science</option>
                             </select>
                         </div>
 
 
                         <div className='flex-1 flex flex-col gap-1'>
-                            <p>Degree</p>
-                            <input onChange={e => setDegree(e.target.value)} value={degree} className='border rounded px-3 py-2' type="text" placeholder='Degree' required />
+                            <p>Current Company</p>
+                            <input onChange={e => setDegree(e.target.value)} value={degree} className='border rounded px-3 py-2' type="text" placeholder='current company' required />
                         </div>
 
                         <div className='flex-1 flex flex-col gap-1'>
@@ -159,11 +156,11 @@ const AddDoctor = () => {
                 </div>
 
                 <div>
-                    <p className='mt-4 mb-2'>About Doctor</p>
-                    <textarea onChange={e => setAbout(e.target.value)} value={about} className='w-full px-4 pt-2 border rounded' rows={5} placeholder='write about doctor'></textarea>
+                    <p className='mt-4 mb-2'>About Mentor</p>
+                    <textarea onChange={e => setAbout(e.target.value)} value={about} className='w-full px-4 pt-2 border rounded' rows={5} placeholder='write about mentor'></textarea>
                 </div>
 
-                <button type='submit' className='bg-primary px-10 py-3 mt-4 text-white rounded-full'>Add doctor</button>
+                <button type='submit' className='bg-primary px-10 py-3 mt-4 text-white rounded-full'>Add mentor</button>
 
             </div>
 

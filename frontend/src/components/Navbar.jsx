@@ -24,8 +24,8 @@ const Navbar = () => {
           <li className='py-1'>HOME</li>
           <hr className='border-none outline-none h-0.5 bg-primary w-3/5 m-auto hidden' />
         </NavLink>
-        <NavLink to='/doctors' >
-          <li className='py-1'>ALL DOCTORS</li>
+        <NavLink to='/mentor' >
+          <li className='py-1'>ALL MENTORS</li>
           <hr className='border-none outline-none h-0.5 bg-primary w-3/5 m-auto hidden' />
         </NavLink>
         <NavLink to='/about' >
@@ -36,6 +36,7 @@ const Navbar = () => {
           <li className='py-1'>CONTACT</li>
           <hr className='border-none outline-none h-0.5 bg-primary w-3/5 m-auto hidden' />
         </NavLink>
+        <a href="https://appfitadmin.vercel.app">Admin</a>
       </ul>
 
       <div className='flex items-center gap-4 '>

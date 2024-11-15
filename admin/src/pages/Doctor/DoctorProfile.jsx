@@ -21,7 +21,7 @@ const DoctorProfile = () => {
                 available: profileData.available
             }
 
-            const { data } = await axios.post(backendUrl + '/api/doctor/update-profile', updateData, { headers: { dToken } })
+            const { data } = await axios.post(backendUrl + '/api/mentor/update-profile', updateData, { headers: { dToken } })
 
             if (data.success) {
                 toast.success(data.message)
@@ -66,7 +66,7 @@ const DoctorProfile = () => {
                     {/* ----- Doc About ----- */}
                     <div>
                         <p className='flex items-center gap-1 text-sm font-medium text-[#262626] mt-3'>About :</p>
-                        <p className='text-sm text-gray-600 max-w-[700px] mt-1'>
+                        <p className='text-sm text-gray-600 max-w-[1000px] mt-1'>
                             {
                                 isEdit
                                     ? <textarea onChange={(e) => setProfileData(prev => ({ ...prev, about: e.target.value }))} type='text' className='w-full outline-primary p-2' rows={8} value={profileData.about} />

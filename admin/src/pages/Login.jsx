@@ -31,7 +31,7 @@ const Login = () => {
 
     } else {
 
-      const { data } = await axios.post(backendUrl + '/api/doctor/login', { email, password })
+      const { data } = await axios.post(backendUrl + '/api/mentor/login', { email, password })
       if (data.success) {
         setDToken(data.token)
         localStorage.setItem('dToken', data.token)
@@ -58,7 +58,7 @@ const Login = () => {
         <button className='bg-primary text-white w-full py-2 rounded-md text-base'>Login</button>
         {
           state === 'Admin'
-            ? <p>Doctor Login? <span onClick={() => setState('Doctor')} className='text-primary underline cursor-pointer'>Click here</span></p>
+            ? <p>Mentor Login? <span onClick={() => setState('Mentor')} className='text-primary underline cursor-pointer'>Click here</span></p>
             : <p>Admin Login? <span onClick={() => setState('Admin')} className='text-primary underline cursor-pointer'>Click here</span></p>
         }
       </div>

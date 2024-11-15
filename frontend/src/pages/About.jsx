@@ -11,11 +11,10 @@ const About = () => {
 
       <div className='my-10 flex flex-col md:flex-row gap-12'>
         <img className='w-full md:max-w-[360px]' src={assets.about_image} alt="" />
-        <div className='flex flex-col justify-center gap-6 md:w-2/4 text-sm text-gray-600'>
-          <p>Welcome to Prescripto, your trusted partner in managing your healthcare needs conveniently and efficiently. At Prescripto, we understand the challenges individuals face when it comes to scheduling doctor appointments and managing their health records.</p>
-          <p>Prescripto is committed to excellence in healthcare technology. We continuously strive to enhance our platform, integrating the latest advancements to improve user experience and deliver superior service. Whether you're booking your first appointment or managing ongoing care, Prescripto is here to support you every step of the way.</p>
+        <div className='flex flex-col justify-center gap-6 md:w-2/4 text-sm text-gray-600 '>
+          <p className="justify">Cracking an interview with Exponent or preparing for interviews using their resources requires strategic preparation across technical, behavioral, and case-related aspects. Technical interviews focus on coding, algorithms, and system design, requiring a solid grasp of data structures like arrays, linked lists, trees, and graphs, alongside algorithms for sorting, searching, and dynamic programming. For system design, particularly for senior roles, it's important to understand scalable architecture principles, such as load balancing, caching, and database sharding, while practicing design for systems like chat apps or e-commerce platforms.</p>
           <b className='text-gray-800'>Our Vision</b>
-          <p>Our vision at Prescripto is to create a seamless healthcare experience for every user. We aim to bridge the gap between patients and healthcare providers, making it easier for you to access the care you need, when you need it.</p>
+          <p>Exponent offers excellent resources, including mock interviews, video tutorials, and structured frameworks, to aid preparation. Practicing clear articulation of your thought process, asking clarifying questions during problem-solving, and demonstrating confidence are key to success. Researching the company and tailoring your responses to its needs also plays a significant role. Feedback from mock interviews or previous attempts should guide your improvements. Consistent practice, strategic preparation, and resilience are your tools to ace the interview process.</p>
         </div>
       </div>
 
@@ -30,11 +29,11 @@ const About = () => {
         </div>
         <div className='border px-10 md:px-16 py-8 sm:py-16 flex flex-col gap-5 text-[15px] hover:bg-primary hover:text-white transition-all duration-300 text-gray-600 cursor-pointer'>
           <b>CONVENIENCE: </b>
-          <p>Access to a network of trusted healthcare professionals in your area.</p>
+          <p>Access to a network of trusted top industry professionals in your area.</p>
         </div>
         <div className='border px-10 md:px-16 py-8 sm:py-16 flex flex-col gap-5 text-[15px] hover:bg-primary hover:text-white transition-all duration-300 text-gray-600 cursor-pointer'>
           <b>PERSONALIZATION:</b>
-          <p >Tailored recommendations and reminders to help you stay on top of your health.</p>
+          <p >Tailored recommendations and reminders to help you stay on top of career.</p>
         </div>
       </div>
 
